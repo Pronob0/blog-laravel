@@ -18,9 +18,10 @@ class FavouriteController extends Controller
             return redirect()->back();
         }
         else{
-                $user->favourite_posts()->dettach($post);
+                $user->favourite_posts()->detach($post);
                 Toastr::success('This Post removed to your favourite List',"Success");
                 return redirect()->back();
         }
     }
+    
 }

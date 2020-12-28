@@ -1,25 +1,21 @@
 @extends('layouts.frontend.layout.main')
-@section('title','Blog')
+@section('title','Post')
 @push('css')
-    <link href="{{ asset('public/assets/frontend/home/css/styles.css') }}" rel="stylesheet">
+<link href="{{ asset('public/assets/frontend/css/allpost/styles.css') }}" rel="stylesheet"> 
+ <link href="{{ asset('public/assets/frontend/css/allpost/responsive.css') }}" rel="stylesheet">  
 
-	<link href="{{ asset('public/assets/frontend/home/css/responsive.css') }}" rel="stylesheet">
 @endpush
-@if($errors->any())
- @foreach ($errors->all() as $error)
-           <div class="alert alert-danger" role="alert">
-        {{ $error }}
-            </div>
- @endforeach
- @endif
-@section('content')
 
+@section('content')
+<div class="slider display-table center-text">
+		<h1 class="title display-table-cell"><b>BEAUTY</b></h1>
+	</div><!-- slider -->
 
 	<section class="blog-area section">
 		<div class="container">
 
 			<div class="row">
-				@foreach ($posts as $post)
+                @foreach ($posts as $post)
 					<div class="col-lg-4 col-md-6">
 					<div class="card h-100">
 						<div class="single-post post-style-1">
@@ -63,20 +59,17 @@
 				</div>
 				@endforeach
 
-				<!-- col-lg-4 col-md-6 -->
-
 				
-
 			</div><!-- row -->
 
-			<a class="load-more-btn" href="#"><b>LOAD MORE</b></a>
+			{{ $posts->links() }}
 
 		</div><!-- container -->
 	</section><!-- section -->
-    
+
+
+ 	</section>   
 @endsection
 @push('js')
-
+    
 @endpush
-
-

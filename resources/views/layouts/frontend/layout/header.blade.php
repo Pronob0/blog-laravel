@@ -7,8 +7,8 @@
 
 			<ul class="main-menu visible-on-click" id="main-menu">
 				<li><a href="#">Home</a></li>
-				<li><a href="#">Categories</a></li>
-				<li><a href="#">Features</a></li>
+				<li><a href="{{ route('all.posts') }}">Posts</a></li>
+				
 				 @guest
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>

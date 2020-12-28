@@ -73,6 +73,18 @@
                             <span>Pending Post</span>
                         </a>
                     </li>
+                    <li class="{{ Request::is('admin/favourite') ? 'active':'' }}">
+                        <a href="{{ route('admin.favourite.post') }}">
+                            <i class="material-icons">favorite</i>
+                            <span>Favourite Post</span>
+                        </a>
+                    </li>
+                    <li class="{{ Request::is('admin/comments') ? 'active':'' }}">
+                        <a href="{{ route('admin.comment.index') }}">
+                            <i class="material-icons">comment</i>
+                            <span>Comments</span>
+                        </a>
+                    </li>
                     <li class="{{ Request::is('admin/setting') ? 'active':'' }}">
                         <a href="{{ route('admin.setting') }}">
                             <i class="material-icons">settings</i>
@@ -105,6 +117,12 @@
                         <a href="{{ route('author.post.index') }}">
                             <i class="material-icons">library_books</i>
                             <span>Post</span>
+                        </a>
+                    </li>
+                    <li class="{{ Request::is('author/favourite') ? 'active':'' }}">
+                        <a href="{{ route('author.favourite.post') }}">
+                            <i class="material-icons">favorite</i>
+                            <span>Favourite Post</span>
                         </a>
                     </li>
                     <li class="{{ Request::is('author/setting') ? 'active':'' }}">
